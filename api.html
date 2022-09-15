@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api demo</title>
+    <link rel="stylesheet" href="api.css">
+
+</head>
+
+<body id="apibody">
+    <div class="position">
+        <div>
+
+            <h1 class="hp" id="hpa"> see your name avtar</h1>
+            <h3>API PROJECT</h3>
+            <label class="text">Enter your name</label><br>
+            <input type="search" name="type" id="nameid">
+
+        </div>
+        <div class="imgdiv">
+            <img src="avtar.jpg" alt="" width="200" height="200" id="imgchange">
+        </div>
+        <button> Click Me</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('button').click(function () {
+                    const name = $('#nameid').val();
+
+                    $('#imgchange').attr('src', `https://joeschmoe.io/api/v1/${name}`);
+                });
+            });
+        </script>
+        <script src="api.js"></script>
+    </div>
+</body>
+
+</html>
